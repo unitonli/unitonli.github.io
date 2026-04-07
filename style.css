@@ -56,6 +56,57 @@ section h2 {
   margin-bottom: 24px;
 }
 
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 40px;
+  padding: 120px 40px;
+  background: #ff4d3a;
+  color: white;
+  text-align: center;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 28px;
+  line-height: 1.4;
+}
+
+/* фон */
+.hero__bg {
+  position: absolute;
+  inset: -50%;
+  z-index: 1;
+
+  background: radial-gradient(circle at 50% 50%, #7c8cff, transparent 60%);
+
+  filter: blur(120px);
+  opacity: 0.8;
+
+  animation: blob 12s infinite ease-in-out;
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0%, 0%) scale(1);
+  }
+  25% {
+    transform: translate(10%, -10%) scale(1.2);
+  }
+  50% {
+    transform: translate(-10%, 10%) scale(0.9);
+  }
+  75% {
+    transform: translate(5%, 5%) scale(1.1);
+  }
+  100% {
+    transform: translate(0%, 0%) scale(1);
+  }
+}
+
 .marquee {
   overflow: hidden;
   white-space: nowrap;
@@ -81,7 +132,6 @@ section h2 {
     black 90%,
     transparent
   );
-
 }
 
 .marquee-wrapper{
