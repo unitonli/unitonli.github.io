@@ -6,8 +6,9 @@
 
 body {
   font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1.5;
-  color: #111;
+  color: #222;
   background: #fff;
 }
 
@@ -53,4 +54,59 @@ section h2 {
 
 .project {
   margin-bottom: 24px;
+}
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+    padding: 8px 0;
+
+    font-family: "Quantico", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  overflow: hidden;
+    /* эффект затухания по краям */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+
+}
+
+.marquee-wrapper{
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+.marquee__inner {
+  display: inline-block;
+  animation: scroll 15s linear infinite;
+  will-change: transform;
+}
+.marquee:hover .marquee__inner {
+  animation-play-state: paused;
+}
+
+.marquee span {
+  margin-right: 40px;
+  font-size: 14px;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
