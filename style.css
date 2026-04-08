@@ -63,13 +63,13 @@ section h2 {
     height: 44px;
     width: 44px;
     display: block;
-    background: url(assets/img/logo.png);
+    background: url(assets/img/ava.png);
     background-size: contain;
 }
-
+/* 
 .logo:hover  {
     background: url(assets/img/logo_color.svg);
-}
+} */
 
 
 .hello h1{
@@ -228,6 +228,14 @@ section h2 {
   background: #ececec;
   border-radius: 40px;
   margin: 50px 0;
+  display: block;
+}
+.case-card:hover {
+
+}
+.case-card:hover img{
+    transform: perspective(1000px) scale(1.02) rotateX(5deg);
+
 }
 
 .case-card__top {
@@ -240,7 +248,7 @@ section h2 {
 
 .case-card__text h2 {
   margin: 0 0 8px;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1.3;
   font-weight: 700;
 }
@@ -290,6 +298,7 @@ section h2 {
   display: block;
   width: 100%;
   height: auto;
+  transition: all 0.3s ease;
 }
 
 @media (max-width: 980px) {
