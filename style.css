@@ -229,9 +229,7 @@ section h2 {
   margin: 50px 0;
   display: block;
 }
-.case-card:hover {
 
-}
 .case-card:hover img{
     transform: perspective(1000px) scale(1.02) rotateX(5deg);
 
@@ -336,3 +334,50 @@ section h2 {
   }
 }
 
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: #fff;
+  color: #111;
+}
+
+.case {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.case-hero h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.case-subtitle {
+  font-size: 20px;
+  color: #666;
+}
+
+.case-block {
+  margin-top: 60px;
+}
+
+.case-block h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.case-block p,
+.case-block li {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.case-image {
+  margin-top: 40px;
+}
+
+.case-image img {
+  width: 100%;
+  border-radius: 16px;
+}
