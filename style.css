@@ -62,13 +62,13 @@ section h2 {
     height: 44px;
     width: 44px;
     display: block;
-    background: url(assets/img/logo.png);
+    background: url(assets/img/ava.png);
     background-size: contain;
 }
-
+/* 
 .logo:hover  {
     background: url(assets/img/logo_color.svg);
-}
+} */
 
 
 .hello h1{
@@ -227,6 +227,14 @@ section h2 {
   background: #ececec;
   border-radius: 40px;
   margin: 50px 0;
+  display: block;
+}
+.case-card:hover {
+
+}
+.case-card:hover img{
+    transform: perspective(1000px) scale(1.02) rotateX(5deg);
+
 }
 
 .case-card__top {
@@ -239,7 +247,7 @@ section h2 {
 
 .case-card__text h2 {
   margin: 0 0 8px;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1.3;
   font-weight: 700;
 }
@@ -253,21 +261,22 @@ section h2 {
 
 .case-card__button {
   flex-shrink: 0;
-  width: 58px;
-  height: 58px;
+
   border-radius: 999px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at 30% 30%, #4d4d4d, #111111 70%);
+  background-color: #222;
   color: #ffffff;
   text-decoration: none;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+      font-size: 14px;
+  line-height: 1;
+  transform: translateX(1px);
+    padding: 10px;
 }
 
 .case-card__button span {
-  font-size: 34px;
-  line-height: 1;
+    font-size: 14px;
   transform: translateX(1px);
 }
 
@@ -289,6 +298,7 @@ section h2 {
   display: block;
   width: 100%;
   height: auto;
+  transition: all 0.3s ease;
 }
 
 @media (max-width: 980px) {
@@ -326,44 +336,3 @@ section h2 {
   }
 }
 
-
-
-.case {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 80px 20px;
-}
-
-.case-hero h1 {
-  font-size: 48px;
-  margin-bottom: 16px;
-}
-
-.case-subtitle {
-  font-size: 20px;
-  color: #666;
-}
-
-.case-block {
-  margin-top: 60px;
-}
-
-.case-block h2 {
-  font-size: 24px;
-  margin-bottom: 16px;
-}
-
-.case-block p,
-.case-block li {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-.case-image {
-  margin-top: 40px;
-}
-
-.case-image img {
-  width: 100%;
-  border-radius: 16px;
-}
