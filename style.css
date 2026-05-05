@@ -8,13 +8,13 @@ body {
   font-family: Arial, sans-serif;
   font-family: 'Inter', sans-serif;
   line-height: 1.5;
-  color: #222;
-  background: #fff;
+  color: #fff;
+  background: #222;
 }
 
 .container {
   width: 100%;
-  max-width: 1140px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -52,8 +52,7 @@ header a:hover{
   color: #222
 }
 
-.hero h1,
-section h2 {
+.hero h1{
   margin-bottom: 16px;
 }
 
@@ -72,7 +71,7 @@ section h2 {
 
 
 .hello h1{
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 800;
   line-height: 1;
   text-transform: uppercase;
@@ -92,10 +91,12 @@ section h2 {
 }
 
 .hello p{
-    font-size: 22px;
-    line-height: 1;
+  font-size: 22px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #999;
 }
-
+/* 
 .nishtyak-wrapper{
   display: flex;
   align-items: flex-start;
@@ -109,7 +110,7 @@ section h2 {
   border-radius: 40px;
   padding: 20px;
   min-height: 100%;
-}
+} */
 
 
 
@@ -133,19 +134,16 @@ section h2 {
 }
 
 /* фон */
-.hero__bg {
+/* .hero__bg {
   position: absolute;
   inset: -50%;
   z-index: 1;
-
   background: radial-gradient(circle at 50% 50%, #7c8cff, transparent 60%);
-
   filter: blur(120px);
   opacity: 0.8;
-
   animation: blob 12s infinite ease-in-out;
-}
-
+} */
+/* 
 @keyframes blob {
   0% {
     transform: translate(0%, 0%) scale(1);
@@ -162,14 +160,14 @@ section h2 {
   100% {
     transform: translate(0%, 0%) scale(1);
   }
-}
+} */
 
 .marquee {
   overflow: hidden;
   white-space: nowrap;
   padding: 8px 0;
 
-  font-family: "Quantico", sans-serif;
+  /* font-family: "Quantico", sans-serif; */
   font-weight: 400;
   font-style: normal;
   text-transform: uppercase;
@@ -193,11 +191,11 @@ section h2 {
 
 .marquee-wrapper{
   /* border: 1px solid #eee; */
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
   /* border-radius: 8px; */
-  background-color: white;
-  color: #222;
+  background-color: #222;
+  color: #666;
 }
 .marquee__inner {
   display: inline-block;
@@ -227,161 +225,27 @@ section h2 {
 
 .case-card {
   margin: 0 auto;
-  padding: 30px 30px 50px 30px;
-  background: #ececec;
-  border-radius: 40px;
   margin: 50px 0;
   display: block;
 }
 
-.case-card:hover img{
-    transform: perspective(1000px) scale(1.02) rotateX(5deg);
-
+.case-card img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.case-card__top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 24px;
-  margin-bottom: 28px;
-}
 
-.case-card__text h2 {
-  margin: 0 0 8px;
-  font-size: 24px;
+.case-card__text{
+  font-size: 20px;
   line-height: 1.3;
-  font-weight: 700;
+}
+.case-card h2{
+  margin-top: 16px;
+  /* font-weight: 700; */
 }
 
 .case-card__text p {
   margin: 0;
-  font-size: 18px;
-  line-height: 1.45;
   color: #6f6f6f;
-}
-
-.case-card__button {
-  flex-shrink: 0;
-
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #222;
-  color: #ffffff;
-  text-decoration: none;
-      font-size: 14px;
-  line-height: 1;
-  transform: translateX(1px);
-    padding: 10px;
-}
-
-.case-card__button span {
-    font-size: 14px;
-  transform: translateX(1px);
-}
-
-.case-card__screens {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.phone-frame {
-  width: 80%;
-  border-radius: 30px;
-  overflow: hidden;
-  background: #000;
-}
-
-.phone-frame img {
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: all 0.3s ease;
-}
-
-@media (max-width: 980px) {
-  .case-card__top {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .case-card__button {
-    align-self: flex-end;
-  }
-}
-
-@media (max-width: 640px) {
-  body {
-    padding: 16px;
-  }
-
-  .case-card {
-    padding: 18px 18px 22px;
-    border-radius: 22px;
-  }
-
-  .case-card__text h2 {
-    font-size: 16px;
-  }
-
-  .case-card__text p {
-    font-size: 16px;
-  }
-
-  .phone-frame {
-    width: 100%;
-    max-width: 320px;
-  }
-}
-
-
-body {
-  margin: 0;
-  font-family: Inter, sans-serif;
-  background: #fff;
-  color: #111;
-}
-
-.case {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 80px 20px;
-}
-
-.case-hero h1 {
-  font-size: 48px;
-  margin-bottom: 16px;
-}
-
-.case-subtitle {
-  font-size: 20px;
-  color: #666;
-}
-
-.case-block {
-  margin-top: 60px;
-}
-
-.case-block h2 {
-  font-size: 24px;
-  margin-bottom: 16px;
-}
-
-.case-block p,
-.case-block li {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-.case-image {
-  margin-top: 40px;
-}
-
-.case-image img {
-  width: 100%;
-  border-radius: 16px;
 }
