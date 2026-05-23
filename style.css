@@ -10,6 +10,10 @@ body {
   line-height: 1.5;
   color: #fff;
   background: #222;
+  background-image: radial-gradient(circle at 1px 1px, rgba(126, 126, 126, 0.22) 1px, transparent 0) !important;
+  background-size: 28px 28px !important;
+  background-repeat: repeat !important;
+  background-attachment: scroll !important;
 }
 
 .container {
