@@ -77,10 +77,107 @@ img {
 }
 
 .brand {
-  width: 415px;
   display: flex;
   align-items: center;
   gap: 8px;
+  width: 415px;
+}
+
+.brand__name {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.status {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  flex: 0 0 15px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: help;
+  background: radial-gradient(
+    circle,
+    rgba(0, 153, 33, 1) 64%,
+    rgba(11, 116, 34, 1) 82%,
+    rgba(23, 78, 35, 1) 100%
+  );
+}
+
+.status__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: #00ff37;
+  box-shadow: 0 0 10px rgba(0, 255, 55, 0.75);
+  animation: statusPulse 1.8s ease-in-out infinite;
+}
+
+.status::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 255, 55, 0.5);
+  opacity: 0;
+  animation: statusRing 1.8s ease-out infinite;
+}
+
+.status::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 12px);
+  transform: translateX(-50%) translateY(-4px);
+  padding: 8px 10px;
+  border: 1px solid #4c4c4c;
+  border-radius: 8px;
+  background: #2b2b2b;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+.status:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+@keyframes statusPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 8px rgba(0, 255, 55, 0.6);
+  }
+
+  50% {
+    transform: scale(0.78);
+    box-shadow: 0 0 16px rgba(0, 255, 55, 1);
+  }
+}
+
+@keyframes statusRing {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
 }
 
 .brand__name,
@@ -91,10 +188,6 @@ img {
   line-height: 1.2;
   font-weight: 700;
   text-transform: uppercase;
-}
-
-.brand__name {
-  color: var(--text);
 }
 
 .status {
