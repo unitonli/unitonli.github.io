@@ -455,3 +455,99 @@ img {
 .accent-red {
   color: #ff4d42;
 }
+
+
+.shots {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.shots__title {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #4c4c4c;
+}
+
+.shots__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+.shots__column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.shot {
+  overflow: hidden;
+  border: 1px solid #4c4c4c;
+  border-radius: 8px;
+  background: #2b2b2b;
+}
+
+.shot--square {
+  aspect-ratio: 1 / 1;
+}
+
+.shot--tall {
+  aspect-ratio: 289 / 501;
+}
+
+.shot img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.shot:hover img {
+  transform: scale(1.04);
+}
+
+/* Планшет */
+@media (max-width: 900px) {
+  .shots__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .shots__column:nth-child(3) {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .shots__column:nth-child(3) .shot:last-child {
+    grid-column: span 2;
+    aspect-ratio: 2 / 1;
+  }
+}
+
+/* Мобилка */
+@media (max-width: 560px) {
+  .shots__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shots__column:nth-child(3) {
+    grid-column: auto;
+    display: flex;
+  }
+
+  .shots__column:nth-child(3) .shot:last-child {
+    grid-column: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .shot--tall {
+    aspect-ratio: 4 / 5;
+  }
+}
