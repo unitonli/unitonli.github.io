@@ -114,17 +114,16 @@ img {
   width: 9px;
   height: 9px;
   border-radius: 999px;
-  background: #00ff37;
-  box-shadow: 0 0 10px rgba(0, 255, 55, 0.75);
+  background: #12b777;
+  box-shadow: 0 0 10px rgba(18, 183, 119, 0.75);
   animation: statusPulse 1.8s ease-in-out infinite;
 }
-
 .status::before {
   content: "";
   position: absolute;
   inset: -6px;
   border-radius: 999px;
-  border: 1px solid rgba(0, 255, 55, 0.5);
+  border: 1px solid rgba(018, 183, 119, 0.5);
   opacity: 0;
   animation: statusRing 1.8s ease-out infinite;
 }
@@ -159,12 +158,12 @@ img {
 @keyframes statusPulse {
   0%, 100% {
     transform: scale(1);
-    box-shadow: 0 0 8px rgba(0, 255, 55, 0.6);
+    box-shadow: 0 0 8px rgba(18, 183, 119, 0.75);
   }
 
   50% {
     transform: scale(0.78);
-    box-shadow: 0 0 16px rgba(0, 255, 55, 1);
+    box-shadow: 0 0 16px rgba(18, 183, 119, 0.75);
   }
 }
 
