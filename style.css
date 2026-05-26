@@ -131,7 +131,6 @@ img {
 .nav a:hover {
   text-decoration: underline;
 }
-
 /* Hero */
 
 .hero {
@@ -459,7 +458,6 @@ img {
   color: #ff4d42;
 }
 
-
 .shots {
   width: 100%;
   display: flex;
@@ -477,19 +475,21 @@ img {
 }
 
 .shots__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .shots__column {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  min-width: 0;
 }
 
 .shot {
+  width: 100%;
   overflow: hidden;
   border: 1px solid #4c4c4c;
   border-radius: 8px;
@@ -504,6 +504,18 @@ img {
   aspect-ratio: 289 / 501;
 }
 
+.shot--blue {
+  background: #325df9;
+}
+
+.shot--white {
+  background: #ffffff;
+}
+
+.shot--light {
+  background: #f5f5f5;
+}
+
 .shot img {
   width: 100%;
   height: 100%;
@@ -512,25 +524,24 @@ img {
   transition: transform 0.45s ease;
 }
 
+.shot--contain img {
+  object-fit: contain;
+}
+
 .shot:hover img {
-  transform: scale(1.04);
+  transform: scale(1.035);
 }
 
 /* Планшет */
 @media (max-width: 900px) {
   .shots__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .shots__column:nth-child(3) {
-    grid-column: span 2;
+    grid-column: 1 / -1;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .shots__column:nth-child(3) .shot:last-child {
-    grid-column: span 2;
-    aspect-ratio: 2 / 1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -545,12 +556,28 @@ img {
     display: flex;
   }
 
-  .shots__column:nth-child(3) .shot:last-child {
-    grid-column: auto;
-    aspect-ratio: 1 / 1;
-  }
-
   .shot--tall {
     aspect-ratio: 4 / 5;
   }
+}
+
+
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #4c4c4c;
+  white-space: nowrap;
+}
+
+.footer p {
+  margin: 0;
 }
