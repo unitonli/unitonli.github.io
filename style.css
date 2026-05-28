@@ -662,7 +662,6 @@ img {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  padding: 14px;
   background:
     radial-gradient(circle at 20% 18%, rgba(0, 255, 55, 0.16), transparent 26%),
     radial-gradient(circle at 80% 75%, rgba(255, 77, 66, 0.14), transparent 28%),
@@ -688,6 +687,7 @@ img {
   font-weight: 700;
   text-transform: uppercase;
   color: #686868;
+  padding: 16px;
 }
 
 .runner-ui b {
@@ -704,10 +704,10 @@ img {
 
 .runner-scene {
   position: absolute;
-  inset: 40px 14px 38px;
+  inset: 40px 0 0;
   overflow: hidden;
-  border: 1px solid rgba(76, 76, 76, 0.7);
-  border-radius: 10px;
+  border-top: 1px solid rgba(76, 76, 76, 0.7);
+  /* border-radius: 10px; */
   background: rgba(34, 34, 34, 0.42);
 }
 
@@ -828,7 +828,8 @@ img {
 }
 
 .runner-player.is-jumping {
-  animation: runnerJump 0.55s cubic-bezier(.17,.67,.25,1);
+  /* animation: runnerJump 0.55s cubic-bezier(.17,.67,.25,1); */
+  animation: runnerJump .7s cubic-bezier(.17,.67,.25,1);
 }
 
 .runner-obstacle {
@@ -874,7 +875,7 @@ img {
   }
 
   45% {
-    transform: translateY(-78px) rotate(-8deg);
+    transform: translateY(-90px) rotate(-8deg);
   }
 
   100% {

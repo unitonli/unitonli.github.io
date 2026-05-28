@@ -52,7 +52,7 @@
       const obstacleRect = obstacle.getBoundingClientRect();
 
       const hit =
-        obstacleRect.left < playerRect.right - 6 &&
+        obstacleRect.left < playerRect.right + 1 &&
         obstacleRect.right > playerRect.left + 6 &&
         obstacleRect.bottom > playerRect.top + 8 &&
         obstacleRect.top < playerRect.bottom - 4;
